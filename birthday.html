@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday </title>
+<title>Happy Birthday FIDHA ❤️</title>
 
 <link rel="stylesheet" href="birthday.css">
 </head>
@@ -16,7 +16,7 @@
 <section class="hero-section">
 
     <h1 class="title">
-        🎉 Happy  Birthday FIDHA
+        🎉 Happy Birthday FIDHA 🎉
     </h1>
 
     <div id="scrollMessage" class="scroll-message">
@@ -33,15 +33,18 @@
 
         <p>
             Happy Birthday ❤️
+            <br><br>
 
-Wishing you a wonderful day filled with happiness, laughter, and beautiful moments.
+            Wishing you a wonderful day filled with happiness, laughter, and beautiful moments.
+            <br><br>
 
-I'm really glad to know you, and I hope this year brings you lots of success, good health, and everything you've been hoping for. You deserve all the happiness that comes your way.
+            I'm really glad to know you, and I hope this year brings you lots of success, good health, and everything you've been hoping for. You deserve all the happiness that comes your way.
+            <br><br>
 
-Thank you for being such a kind and wonderful person. May your special day be as lovely as your smile and may the year ahead be full of unforgettable memories.
+            Thank you for being such a kind and wonderful person. May your special day be as lovely as your smile and may the year ahead be full of unforgettable memories.
+            <br><br>
 
-Enjoy your day and have an amazing birthday! 🎉✨
-
+            Enjoy your day and have an amazing birthday! 🎉✨
         </p>
 
     </div>
@@ -70,7 +73,7 @@ Enjoy your day and have an amazing birthday! 🎉✨
 
 </section>
 
-<div id="hearts"></div>
+<div id="confetti-container"></div>
 
 <audio id="bgMusic" autoplay loop>
     <source src="music1.mp3" type="audio/mpeg">
@@ -78,13 +81,13 @@ Enjoy your day and have an amazing birthday! 🎉✨
 
 <script>
 window.addEventListener("load", () => {
-    document.getElementById("bgMusic").play().catch(err => {
-        console.log("Autoplay blocked:", err);
-    });
+    document.getElementById("bgMusic")
+    .play()
+    .catch(err => console.log("Autoplay blocked"));
 });
 </script>
+
 <script src="birthday.js"></script>
 
 </body>
 </html>
-

@@ -1,3 +1,4 @@
+// Scroll Message
 
 setTimeout(() => {
 
@@ -6,6 +7,9 @@ setTimeout(() => {
     .classList.add("show-message");
 
 },3000);
+
+
+// Fade In Cards
 
 const observer =
 new IntersectionObserver((entries)=>{
@@ -32,21 +36,58 @@ document
 
 });
 
-for(let i=0;i<60;i++){
 
-    let heart =
-    document.createElement("span");
+// Birthday Confetti Popper Effect
 
-    heart.innerHTML="❤️";
+function popConfetti(){
 
-    heart.style.left =
-    Math.random()*100 + "vw";
+    const colors = [
+        "#ff4d6d",
+        "#ffd60a",
+        "#06d6a0",
+        "#4cc9f0",
+        "#ffffff",
+        "#ff99c8"
+    ];
 
-    heart.style.animationDuration =
-    (4 + Math.random()*6) + "s";
+    for(let i=0;i<150;i++){
 
-    document
-    .getElementById("hearts")
-    .appendChild(heart);
+        const confetti =
+        document.createElement("div");
 
+        confetti.classList.add("confetti");
+
+        confetti.style.left =
+        Math.random()*100 + "vw";
+
+        confetti.style.top =
+        (-20 - Math.random()*200) + "px";
+
+        confetti.style.background =
+        colors[Math.floor(
+            Math.random()*colors.length
+        )];
+
+        confetti.style.animationDuration =
+        (2 + Math.random()*3) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(()=>{
+            confetti.remove();
+        },5000);
+    }
 }
+
+
+// Poppers on Page Load
+
+window.addEventListener("load",()=>{
+
+    popConfetti();
+
+    setTimeout(popConfetti,1000);
+
+    setTimeout(popConfetti,2000);
+
+});
