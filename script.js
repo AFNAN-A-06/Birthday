@@ -1,51 +1,13 @@
-// Typing Animation
-
-const text =
-"Every moment with you is special. Today we celebrate the most beautiful person in my life ❤️";
-
-let i = 0;
-
-function typeWriter(){
-
-    if(i < text.length){
-
-        document.getElementById("typing").innerHTML += text.charAt(i);
-
-        i++;
-
-        setTimeout(typeWriter,50);
-    }
-
-}
-
-typeWriter();
-
-
-// Floating Hearts
-
-for(let i=0;i<30;i++){
-
-    let heart = document.createElement("span");
-
-    heart.innerHTML = "❤️";
-
-    heart.style.left = Math.random()*100 + "vw";
-
-    heart.style.animationDuration =
-    (5 + Math.random()*5) + "s";
-
-    document.getElementById("hearts")
-    .appendChild(heart);
-
-}
-
-
-// Countdown
-
 const birthday =
 new Date("June 21, 2026 00:00:00").getTime();
 
-setInterval(()=>{
+const countdown =
+document.getElementById("countdown");
+
+const cakeSection =
+document.getElementById("cakeSection");
+
+let timer = setInterval(() => {
 
     let now = new Date().getTime();
 
@@ -60,7 +22,34 @@ setInterval(()=>{
     let s =
     Math.floor((gap%(1000*60))/1000);
 
-    document.getElementById("countdown").innerHTML =
+    countdown.innerHTML =
     `⏳ ${h}h ${m}m ${s}s`;
 
+    if(gap <= 0){
+
+        clearInterval(timer);
+
+        countdown.innerHTML =
+        "🎉 It's Your Birthday 🎉";
+
+        cakeSection.classList.remove("hidden");
+    }
+
 },1000);
+
+document
+.getElementById("blowBtn")
+.addEventListener("click",()=>{
+
+    document
+    .getElementById("flame")
+    .style.display="none";
+
+    setTimeout(()=>{
+
+        window.location.href =
+        "birthday.html";
+
+    },1500);
+
+});

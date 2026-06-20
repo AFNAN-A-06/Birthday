@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday </title>
+
+<link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+
+<img src="girlfriend.jpeg" class="bg-image">
+
+<div class="dark-overlay"></div>
+
+<section class="hero-section">
+
+    <h1 class="title">
+        🎉 Happy  Birthday FIDHA
+    </h1>
+
+    <div id="scrollMessage" class="scroll-message">
+        👇 Scroll Down To See Your Birthday Wishes 👇
+    </div>
+
+</section>
+
+<section class="wish-section">
+
+    <div class="card fade-in">
+
+        <h2>💖 A Special Message 💖</h2>
+
+        <p>
+            Happy Birthday ❤️
+
+Wishing you a wonderful day filled with happiness, laughter, and beautiful moments.
+
+I'm really glad to know you, and I hope this year brings you lots of success, good health, and everything you've been hoping for. You deserve all the happiness that comes your way.
+
+Thank you for being such a kind and wonderful person. May your special day be as lovely as your smile and may the year ahead be full of unforgettable memories.
+
+Enjoy your day and have an amazing birthday! 🎉✨
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="wish-section">
+
+    <div class="card fade-in">
+
+        <h2>🌹 My Wishes For You 🌹</h2>
+
+        <p>
+            ✨ May all your dreams come true.<br><br>
+
+            ✨ May your smile never fade.<br><br>
+
+            ✨ May happiness always stay with you.<br><br>
+
+            ✨ May success follow you everywhere.<br><br>
+
+            ✨ May this be your best year ever.
+        </p>
+
+    </div>
+
+</section>
+
+<div id="hearts"></div>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music1.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("load", () => {
+    document.getElementById("bgMusic").play().catch(err => {
+        console.log("Autoplay blocked:", err);
+    });
+});
+</script>
+<script src="birthday.js"></script>
+
+</body>
+</html>
+
